@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&family=Courgette&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #2b2b2b;
+}
+
+.contenido__centrado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 80vw;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 20px;
+    background-color: #ffffffe3;
+    border-radius: 30px;
+    box-shadow: -5px -5px 4px #101010,
+        5px 5px 4px #3e5e54;
+}
+
+.contenedor__interno {
+    width: 80%;
+}
+
+#titulo {
+    font-family: "Courgette", cursive;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#cita {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+#autor {
+    font-family: "Courgette", cursive;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+#button__cambiar {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+}

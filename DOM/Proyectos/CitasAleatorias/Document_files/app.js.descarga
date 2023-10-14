@@ -1,0 +1,7 @@
+const nameInput = document.querySelector("#name");
+const password = document.querySelector("#password");
+const text = document.querySelector("h3");
+
+nameInput.addEventListener("input", (e) => {
+  text.textContent = e.target.value;
+});

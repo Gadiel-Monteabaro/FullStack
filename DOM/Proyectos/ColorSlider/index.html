@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Slider RGB</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container-i">
+        <div id="color" class="color">
+          <label for="red">Rojo</label>
+          <input id="red" type="range" min="0" max="255" value="23" step="1" />
+          <p id="text-red"></p>
+        </div>
+        <div class="color">
+          <label for="blue">Azul</label>
+          <input id="blue" type="range" min="0" max="255" value="56" step="1" />
+          <p id="text-blue"></p>
+        </div>
+        <div class="color">
+          <label for="green">Verde</label>
+          <input
+            id="green"
+            type="range"
+            min="0"
+            max="255"
+            value="41"
+            step="1"
+          />
+          <p id="text-green">25</p>
+        </div>
+      </div>
+    </div>
+    <div id="box__color"></div>
+  </body>
+
+  <script src="./app.js"></script>
+</html>
