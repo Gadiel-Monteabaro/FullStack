@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll Personalizado */
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scroll::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #5046db66;
+    border-radius: 5px;
+}
