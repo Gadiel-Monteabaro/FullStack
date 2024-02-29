@@ -22,7 +22,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   // State error __ para visualizar si hay un error con los campos
   const [error, setError] = useState(false);
 
-  // useEffect utilizado para Voton Editar
+  // useEffect utilizado para Botón Editar
   useEffect(() => {
     if (Object.keys(paciente).length > 0) {
       setNombre(paciente.nombre);
