@@ -1,0 +1,36 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Gadiel",
+      "puesto": "Programador Web"
+    },
+    {
+      "id": 2,
+      "nombre": "Ezequiel",
+      "puesto": "UX / UI"
+    },
+    {
+      "id": 3,
+      "nombre": "Andrea",
+      "puesto": "Servidores"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Coca-Cola",
+      "precio": 800
+    },
+    {
+      "id": 1,
+      "nombre": "Pepsi",
+      "precio": 650
+    },
+    {
+      "id": 1,
+      "nombre": "Fernet",
+      "precio": 1500
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.alert {
+  padding: 1rem;
+  border: 0.2rem solid #ff0054;
+  border-radius: 0.3rem;
+  text-align: center;
+  background-color: #ff0054;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
