@@ -6,7 +6,5 @@ function copyMachine(arr, num) {
   }
   return newArr;
 }
-
 console.log(copyMachine([true, false, true], 2));
-
 // función devuelve un nuevo arreglo compuesto por num copias de arr.

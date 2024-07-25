@@ -1,13 +1,11 @@
 /*
   JavaScript es un lenguaje de programación, orientado en la web, fue creado a mediados de los '90 por Brendan Eich, un developer de uno de los primeros navegadores de internet: Netscape.
 
-  La separación de tareas es un aspecto fundamental en la programación. Por eso es tan necesario que cada lenguaje tenga su propio archivo.
-
-  Es un lenguaje Interpretado. ->  los intérpretes solo realizan la traducción a medida que sea necesaria, típicamente, instrucción por instrucción.
+  Es un lenguaje Interpretado ->  los intérpretes solo realizan la traducción a medida que sea necesaria, típicamente, instrucción por instrucción.
 
   Multiparadigma: funcional, orientado a objetos, orientado en eventos.
 
-  Dinamicamente Tipado.
+  Dinamicamente Tipado. { nos referimos a dinamicamente tipado, cuando una variable puede tomar distintos tipos de datos (let) }
 
   Imperativo: Las instrucciones se ejecutan una tras otras de manera secuencial, salvo cuando se encuentran estructuras de control condicionales o bucles.
 */
@@ -18,7 +16,6 @@
   Podemos escribir codigo en linea dentro de un elento de la siguiente manera -
 
 */
-<body onload="alert('Hola, estamos probando el DOM.')"></body>;
 
 /*
   Pero como todo codigo en linea no es lo mas recomendado, excepto para pruebas o codigo de corta redaccion.
@@ -27,7 +24,7 @@
       Incorporá el tag script justo antes de cerrar el < body >.
       Declará su ruta usando el atributo src:
 */
-<script src="myScript.js"></script>;
+<script src="myScript.js"></script>; // typescript resuelve esto
 
 /*
   Es importante para evitar futuros bugs.
@@ -37,3 +34,5 @@
 
   El término fue acuñado durante el proyecto de Mark II en la Universidad de Harvard, cuando el equipo encontró una polilla en el hardware que impedía el funcionamiento del programa.
 */
+
+console.log(numero1); // 10

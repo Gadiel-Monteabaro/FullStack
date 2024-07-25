@@ -65,7 +65,6 @@ export const usePatienteStore = create<PatientState>()(
       }),
       {
         name: "patient-storage",
-
         // storage: createJSONStorage(() => sessionStorage), podemos especificar si queremos sessionstorage o localStorage(default)
       }
     )
