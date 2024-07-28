@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document, Types } from "mongoose";
+import Note from "./Note";
 
 // estados de nuestra tarea, solamente las propiedades seran de modo lectura
 const taskStatus = {
@@ -58,6 +59,16 @@ const TaskSchema: Schema = new Schema(
     ],
   },
   { timestamps: true }
+);
+
+// middleware
+TaskSchema.pre(
+  "deleteOne",
+  { document: true, query: false },
+  async function () {
+    const taskId = this._id;
+    if (!taskId) return await Note.deleteMany({ task: taskId });
+  }
 );
 
 // generamos el model de las tareas
