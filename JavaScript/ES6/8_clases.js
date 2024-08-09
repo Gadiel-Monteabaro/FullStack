@@ -1,3 +1,4 @@
+// constructor -> clases
 class Producto {
   constructor(nombre, precio) {
     this.nombre = nombre;
@@ -8,6 +9,7 @@ class Producto {
     return `El producto ${this.nombre} tiene un precio de: $${this.precio} dolares.`;
   }
 }
+console.log(heladera.nombre, heladera.precio);
 
 const producto1 = new Producto("Monitor Curvo", 800);
 const producto2 = new Producto("Tv Samsung", 600);
