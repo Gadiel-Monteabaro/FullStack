@@ -59,5 +59,3 @@ async function obtenerProductos() {
     console.log(`Precio: $${producto.precio} ARS.`);
   });
 }
-
-obtenerProductos();
