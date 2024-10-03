@@ -16,7 +16,7 @@ export async function createOrder(data: unknown) {
       data: {
         name: result.data.name,
         total: result.data.total,
-        orderProduct: {
+        orderProducts: {
           create: result.data.order.map((product) => ({
             productId: product.id,
             quantity: product.quantity,

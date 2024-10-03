@@ -13,11 +13,15 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
-    "@prisma/client": "^5.17.0",
-    "next": "14.2.5",
-    "react": "^18",
+    "@prisma/client": "^5.19.0",
+    "icons": "^1.0.0",
+    "next": "^14.2.13",
+    "next-cloudinary": "^6.13.0",
+    "react": "^18.3.1",
     "react-dom": "^18",
+    "react-icons": "^5.3.0",
     "react-toastify": "^10.0.5",
+    "swr": "^2.2.5",
     "zod": "^3.23.8",
     "zustand": "^4.5.4"
   },
@@ -28,7 +32,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
-    "prisma": "^5.17.0",
+    "prisma": "^5.19.0",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
