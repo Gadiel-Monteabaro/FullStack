@@ -15,7 +15,6 @@ function App() {
   const [paciente, setPaciente] = useState({});
 
   // Local Storage es una API del navegador que permite la persistencia de datos en memoria. Dichos datos se almacenan en el propio browser web y pueden ser accedidos a los mismos aun si cerramos el navegador o apagamos el computador.
-
   useEffect(() => {
     localStorage.setItem("pacientes", JSON.stringify(pacientes));
   }, [pacientes]);

@@ -34,7 +34,7 @@ export default function PatientForm() {
       setValue("date", activePatient.date);
       setValue("symptoms", activePatient.symptoms);
     }
-  }, [activeId]);
+  }, [patients, activeId, setValue]);
 
   // Los datos ingresados por el usuario, son obtenidos por "data"
   const registerPatient = (data: DraftPatient) => {

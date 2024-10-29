@@ -40,7 +40,6 @@ export default function Router() {
         </Route>
 
         {/* Rutas de autenticacion */}
-
         <Route element={<AuthLayout />}>
           <Route path="/auth/login" element={<LoginView />} />
           <Route path="/auth/register" element={<RegisterView />} />

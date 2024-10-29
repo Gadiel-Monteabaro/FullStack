@@ -1,5 +1,6 @@
 import styles from "./App.module.css";
 import Alert from "./components/Alert/Alert";
+import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form";
 import Spinner from "./components/Spinner/Spinner";
 import WeatherDetail from "./components/WeatherDetaild/WeatherDetail";
@@ -18,6 +19,8 @@ function App() {
         {hasWeatherData && <WeatherDetail weather={weather} />}
         {notFound && <Alert>Ciudad no encontrada</Alert>}
       </div>
+
+      <Footer />
     </>
   );
 }

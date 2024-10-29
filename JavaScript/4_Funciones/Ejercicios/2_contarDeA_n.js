@@ -7,10 +7,11 @@ function contarDeA_n(contar_de_a, contar_hasta) {
 
   while (i <= contar_hasta) {
     console.log(i);
-
     i += contar_de_a;
+    if (i > contar_hasta) {
+      console.log(contar_hasta);
+    }
   }
-  console.log(contar_hasta);
 }
 
-contarDeA_n(0, 200);
+contarDeA_n(9, 200);

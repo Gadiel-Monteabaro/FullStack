@@ -11,7 +11,7 @@ let stringOut = "";
 
 //ingresa n = 1
 while (n < 6) {
-  if (n == 1) {
+  if (n === 1) {
     stringOut += `¡Bienvenido, ${n}!`;
   } else {
     stringOut += `¡Bienvenido, ${n}! Te presento`;

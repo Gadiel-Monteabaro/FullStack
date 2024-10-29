@@ -3,6 +3,18 @@
   --primary: #f59e0b;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   font-size: 62.5%; /* 10px */
 }

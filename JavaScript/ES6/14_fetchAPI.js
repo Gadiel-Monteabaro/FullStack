@@ -35,20 +35,6 @@ async function obtenerEmpleados() {
 }
 
 async function obtenerProductos() {
-  const archivo = "14_fetch__empleados.json";
-
-  fetch(archivo)
-    // obteniendo los datos de nuestro archivo json
-    .then((res) => res.json())
-    // trabajando con los datos recibidos
-    .then((datos) => {
-      const { productos } = datos;
-      productos.forEach((producto) => {
-        console.log(`Producto: ${producto.nombre}`);
-        console.log(`Precio: $${producto.precio} ARS.`);
-      });
-    });
-
   // obtener los datos de producto con async __ await
   const res = await fetch(archivo);
   const datos = await res.json();
@@ -59,3 +45,21 @@ async function obtenerProductos() {
     console.log(`Precio: $${producto.precio} ARS.`);
   });
 }
+
+function obtenerProductosPromesas() {
+  const data = "14_fetch__empleados.json";
+
+  fetch(data)
+    // obteniendo los datos de nuestro archivo json
+    .then((res) => res.json())
+    // trabajando con los datos recibidos
+    .then((datos) => {
+      const { productos } = datos;
+      productos.forEach((producto) => {
+        console.log(`Producto: ${producto.nombre}`);
+        console.log(`Precio: $${producto.precio} ARS.`);
+      });
+    });
+}
+
+obtenerProductosPromesas();

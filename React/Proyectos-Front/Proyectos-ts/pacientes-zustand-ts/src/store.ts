@@ -1,6 +1,5 @@
 // importamos la funcion de create
 import { create } from "zustand";
-// persist, nos va a permitir tener un estado persistente
 import { devtools, persist } from "zustand/middleware";
 import { v4 as uuidv4 } from "uuid";
 import { DraftPatient, Patient } from "./types";

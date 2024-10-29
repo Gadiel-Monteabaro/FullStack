@@ -55,7 +55,7 @@ const Header = ({
                                 />
                               </td>
                               <td>{guitar.name}</td>
-                              <td className="fw-bold">${guitar.price}</td>
+                              <td className="font-bold">${guitar.price}</td>
                               <td className="flex align-items-start gap-4">
                                 <button
                                   type="button"

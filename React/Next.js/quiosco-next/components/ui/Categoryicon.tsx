@@ -13,6 +13,8 @@ type CategoryiconProps = {
 export default function Categoryicon({ category }: CategoryiconProps) {
   const params = useParams<{ category: string }>();
 
+  console.log(params);
+
   return (
     <div
       className={`${
@@ -21,9 +23,9 @@ export default function Categoryicon({ category }: CategoryiconProps) {
     >
       <div className="w-16 h-16 relative">
         <Image
+          fill
           src={`/icon_${category.slug}.svg`}
           alt={`Icono de ${category.slug}`}
-          fill
         />
       </div>
       <Link className="text-xl font-bold" href={`/order/${category.slug}`}>
