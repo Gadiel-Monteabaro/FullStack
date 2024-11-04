@@ -127,6 +127,7 @@ const ratings = watchList.map(function movie(movie) {
   let objectMovieRating = {
     title: movie.Title,
     rating: movie.imdbRating,
+    score: movie.Metascore,
   };
 
   return objectMovieRating;

@@ -2,24 +2,24 @@
 @use "base/mixins" as m;
 
 .sobre-festival {
-  @include m.contenedor;
-  @include m.desktop {
-    @include m.grid(2, 5rem);
-  }
   img {
     border-radius: 1.2rem;
     position: relative;
   }
+  @include m.contenedor;
+  @include m.desktop {
+    @include m.grid(2, 5rem);
+  }
 }
 
 .contenido-festival {
+  margin-top: 4rem;
   @include m.desktop {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  margin-top: 4rem;
   h2 {
     margin-bottom: 2rem;
   }
