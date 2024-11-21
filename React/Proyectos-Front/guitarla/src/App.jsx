@@ -27,7 +27,7 @@ function App() {
         cartTotal={cartTotal}
       />
       <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección</h2>
+        <h2 className="text-center guitar-card-text">Nuestra Colección</h2>
 
         <div className="row mt-5">
           {data.map((guitar) => (
@@ -36,10 +36,10 @@ function App() {
         </div>
       </main>
 
-      <footer className="bg-dark mt-5 py-5">
+      <footer className="mt-5 py-3 footer">
         <div className="container-xl">
-          <p className="text-white text-center fs-4 mt-4 m-md-0">
-            GuitarLA - Todos los derechos Reservados
+          <p className="text-white text-center mt-4 m-md-0">
+            Gadiel Monteabaro
           </p>
         </div>
       </footer>

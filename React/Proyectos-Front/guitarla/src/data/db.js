@@ -1,96 +1,84 @@
 export const db = [
   {
     id: 1,
-    name: "Lukather",
-    image: "guitarra_01",
+    name: "Product N°1",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 299,
   },
   {
     id: 2,
-    name: "SRV",
-    image: "guitarra_02",
+    name: "Product N°2",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 349,
   },
   {
     id: 3,
-    name: "Borland",
-    image: "guitarra_03",
+    name: "Product N°3",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 329,
   },
   {
     id: 4,
-    name: "VAI",
-    image: "guitarra_04",
+    name: "Product N°4",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 299,
   },
   {
     id: 5,
-    name: "Thompson",
-    image: "guitarra_05",
+    name: "Product N°5",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 399,
   },
   {
     id: 6,
-    name: "White",
-    image: "guitarra_06",
+    name: "Product N°6",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 329,
   },
   {
     id: 7,
-    name: "Cobain",
-    image: "guitarra_07",
+    name: "Product N°7",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 349,
   },
   {
     id: 8,
-    name: "Dale",
-    image: "guitarra_08",
+    name: "Product N°8",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 379,
   },
   {
     id: 9,
-    name: "Krieger",
-    image: "guitarra_09",
+    name: "Product N°9",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 289,
   },
   {
     id: 10,
-    name: "Campbell",
-    image: "guitarra_10",
+    name: "Product N°10",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 349,
   },
   {
     id: 11,
-    name: "Reed",
-    image: "guitarra_11",
+    name: "Product N°11",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 399,
   },
   {
     id: 12,
-    name: "Hazel",
-    image: "guitarra_12",
+    name: "Product N°12",
     description:
       "Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.",
     price: 379,
