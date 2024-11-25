@@ -6,6 +6,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #131416;
   --card-bg-gradient: linear-gradient(-30deg, #161719, #373737);
+  --border-after-before: #4cc9f0;
 }
 
 * {
@@ -19,13 +20,6 @@ body {
   min-height: 100vh;
   display: grid;
   align-items: center;
-}
-
-h1 {
-  font-size: 2.2em;
-  padding: 2rem;
-  text-align: center;
-  line-height: 1.1;
 }
 
 /* contenedor */
@@ -43,15 +37,29 @@ h1 {
 }
 .card {
   background: var(--card-bg-gradient);
-  position: relative;
-  color: white;
   min-width: 300px;
   min-height: 500px;
   border-radius: 2px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.6);
+  position: relative;
 }
+/* Determinar el color
+  .card::after {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    left: 15%;
+    bottom: 0;
+    width: 70%;
+    border: 1px solid var(--border-after-before);
+    box-shadow: 0 0 5px var(--border-after-before);
+  }
+*/
 
 /* primera carta */
+.first-card {
+  padding: 8px;
+}
 
 /* segunda carta */
 .second-card {
