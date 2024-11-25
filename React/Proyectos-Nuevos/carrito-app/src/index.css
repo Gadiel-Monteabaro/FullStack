@@ -5,8 +5,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #131416;
-  --card-bg-gradient: linear-gradient(-30deg, #161719, #373737);
-  --border-after-before: #4cc9f0;
+  --border-after-before: #4cc9f0; /* No utilizable por el momento */
+  --card-bg: #1e2022;
+  --product-box-bg: #2a2b2f;
 }
 
 * {
@@ -36,7 +37,7 @@ body {
   gap: 2rem; /* Espacio entre las cartas */
 }
 .card {
-  background: var(--card-bg-gradient);
+  background: var(--card-bg);
   min-width: 300px;
   min-height: 500px;
   border-radius: 2px;
@@ -56,10 +57,39 @@ body {
 */
 
 /* primera carta */
-.first-card {
-  padding: 8px;
+.card-title {
+  /* estilos al titulo principal de la carta */
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 20px auto;
+  width: 80%;
+  text-transform: uppercase;
 }
-
+.product-box img {
+  width: 2.5rem;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+.product-box {
+  background: var(--product-box-bg);
+  display: flex; /* elementos en linea imagen, nombre de producto , precio */
+  justify-content: space-between;
+  padding: 0 8px;
+  font-weight: bold;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 6px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity ease-in 200ms;
+}
+.product-box:hover {
+  opacity: 0.8;
+}
 /* segunda carta */
 .second-card {
   display: grid;
