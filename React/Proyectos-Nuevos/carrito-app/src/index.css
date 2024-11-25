@@ -41,7 +41,6 @@ body {
   min-height: 500px;
   border-radius: 2px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.6);
-  position: relative;
 }
 /* Determinar el color
   .card::after {
