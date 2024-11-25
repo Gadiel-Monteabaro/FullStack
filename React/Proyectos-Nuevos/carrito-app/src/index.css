@@ -7,9 +7,13 @@
   background-color: #121212;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   min-width: 320px;
   min-height: 100vh;
   display: grid;
@@ -33,15 +37,30 @@ h1 {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-  gap: 2.5rem; /* Espacio entre las cartas */
+  gap: 2rem; /* Espacio entre las cartas */
 }
 
 .card {
   background: linear-gradient(-30deg, #1e1e1e81, #2a2a2ac9);
+  position: relative;
   color: white;
   min-width: 300px;
   min-height: 500px;
-  padding: 20px;
   border-radius: 2px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.6);
+}
+
+.second-card {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+.second-card section {
+  background-color: #dee2e6;
+}
+
+.second-card footer {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px;
 }
