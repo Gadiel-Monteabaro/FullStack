@@ -1,4 +1,5 @@
 import Product from "./components/Product";
+import { menuItems } from "./data/db";
 
 function App() {
   return (
@@ -7,13 +8,15 @@ function App() {
         <div className="card first-card">
           <h2 className="card-title">Productos</h2>
           <div className="product-container">
-            <Product />
+            {menuItems.map((item) => (
+              <Product key={item.id} item={item} />
+            ))}
           </div>
         </div>
         <div className="card second-card">
           <section></section>
           <footer className="footer">
-            <p className="first-p-footer">Gadiel Monteabaro</p>
+            <p className="first-p-footer">@Gadiel Monteabaro</p>
           </footer>
         </div>
       </div>

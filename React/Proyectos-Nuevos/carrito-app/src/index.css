@@ -38,7 +38,7 @@ body {
 }
 .card {
   background: var(--card-bg);
-  min-width: 300px;
+  min-width: 320px;
   min-height: 500px;
   border-radius: 2px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.6);
@@ -75,16 +75,14 @@ body {
   background: var(--product-box-bg);
   display: flex; /* elementos en linea imagen, nombre de producto , precio */
   justify-content: space-between;
-  padding: 0 8px;
-  font-weight: bold;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 6px;
   align-items: center;
+  font-weight: bold;
   cursor: pointer;
   border: none;
+  padding: 0 8px;
+  width: 100%;
+  margin-bottom: 6px;
   border-radius: 2px;
-  opacity: 1;
   transition: opacity ease-in 200ms;
 }
 .product-box:hover {
