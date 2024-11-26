@@ -90,6 +90,7 @@ body {
 .product-box:hover {
   opacity: 0.8;
 }
+
 /* segunda carta */
 .second-card {
   display: grid;
