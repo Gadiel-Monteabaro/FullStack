@@ -6,8 +6,8 @@ type ItemProductProps = {
 
 export default function Product({ item }: ItemProductProps) {
   return (
-    <button className="product-box">
-      <img src={`${item.img}`} alt="imagen del producto" />
+    <button className="product-item">
+      <img src={`${item.img}.jpg`} alt="imagen del producto" />
       <p>{item.name}</p>
       <p>${item.price}</p>
     </button>
