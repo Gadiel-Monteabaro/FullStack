@@ -108,13 +108,14 @@ body {
 }
 .card .card-item {
   color: var(--card-color);
-  font-weight: bold;
+  font-weight: 800;
   display: flex;
-  margin-bottom: 6px;
   justify-content: space-around;
   align-items: center;
-  padding: 8px 4px;
   box-shadow: var(--shadow-md);
+  font-size: 14px;
+  margin-bottom: 6px;
+  padding: 8px 4px;
 }
 .card-buttons {
   width: 70px;
@@ -139,5 +140,5 @@ body {
   background: #131416;
 }
 .item-quantity {
-  color: gray;
+  color: #808080;
 }
