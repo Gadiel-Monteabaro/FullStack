@@ -44,9 +44,22 @@ export function useApp() {
     }
   }
 
+  // Función que devuelve el precio de un producto multiplicado por la cantidad
+  function productTotal(price: number, quantity: number) {
+    return price * quantity;
+  }
+
+  // Función para eliminar un producto del estado "order" segun su "id"
+  function removeFromOrder(id: MenuItem["id"]) {
+    // Actualiza el estado "order" para eliminar el producto con el "id" proporcionado
+    setOrder((prevCart) => prevCart.filter((guitar) => guitar.id !== id));
+  }
+
   return {
     data,
     order,
     addToOrder,
+    productTotal,
+    removeFromOrder,
   };
 }
