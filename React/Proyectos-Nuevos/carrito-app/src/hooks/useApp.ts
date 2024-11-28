@@ -5,18 +5,18 @@ import { MenuItem, OrderItem } from "../types";
 export function useApp() {
   // Función para obtener el estado inicial de la orden
   const initialOrder = (): OrderItem[] => {
-    // Obtiene el valor almacenado en el localStorage
+    // Obtener el valor almacenado en el localStorage
     const localStorageOrder = localStorage.getItem("order");
-    // Si existe el valor retorna el arreglo, sino, un arreglo vacio
+    // Si existe el valor retornar el arreglo, sino, un arreglo vacio
     return localStorageOrder ? JSON.parse(localStorageOrder) : [];
   };
 
-  // Inicializa el estado con los datos del menú
+  // Inicializar el estado con los datos del menú
   const [data] = useState(menuItems);
-  // Inicializa el estado obteniendo los datos del local storage
+  // Inicializar el estado obteniendo los datos del local storage
   const [order, setOrder] = useState(initialOrder);
 
-  // Guarda en localStorage el estado order, cada vez que "order" cambie
+  // Guardar en localStorage el estado order, cada vez que "order" cambie
   useEffect(() => {
     localStorage.setItem("orden", JSON.stringify(order));
   }, [order]);
@@ -25,20 +25,20 @@ export function useApp() {
 
   // Función para agregar productos al estado "order"
   function addToOrder(item: MenuItem) {
-    // Busca el indice del producto en el estado "order" comparando su "ID" con el parametro de entrada "item"
+    // Buscar el indice del producto en el estado "order" comparando su "ID" con el parametro de entrada "item"
     const itemExist = order.findIndex((product) => product.id === item.id);
 
     // Si el producto existe en el estado "order"
     if (itemExist >= 0) {
-      // Verifica si la cantidad actual del producto alcanzó el límite máximo
+      // Verificar si la cantidad actual del producto alcanzó el límite máximo
       if (order[itemExist].quantity >= MAX_ITEMS) return;
 
-      // Crea una copía del estado actual y actualiza la cantidad del producto
+      // Crear una copía del estado actual y actualizar la cantidad del producto
       const updateOrder = [...order];
       updateOrder[itemExist].quantity++;
       setOrder(updateOrder);
     } else {
-      // Si el producto no existe, crea un nuevo producto con la cantidad inicial de 1
+      // Si el producto no existe, crear un nuevo producto con la cantidad inicial de 1
       const newItem: OrderItem = { ...item, quantity: 1 };
       setOrder([...order, newItem]);
     }
@@ -51,8 +51,25 @@ export function useApp() {
 
   // Función para eliminar un producto del estado "order" segun su "id"
   function removeFromOrder(id: MenuItem["id"]) {
-    // Actualiza el estado "order" para eliminar el producto con el "id" proporcionado
+    // Actualizar el estado "order" para eliminar el producto con el "id" proporcionado
     setOrder((prevCart) => prevCart.filter((guitar) => guitar.id !== id));
+  }
+
+  // Función para incrementar la cantidad de un producto
+  function increaseQuantity(id: MenuItem["id"]) {
+    // Recorrer el estado "order" y actualizar la cantidad del producto
+    const updateOrder = order.map((item) => {
+      // Si el id coincide, actualizar la cantidad
+      if (item.id === id && item.quantity < MAX_ITEMS) {
+        return {
+          ...item,
+          quantity: item.quantity + 1,
+        };
+      }
+      // Si no, devolver el item sin actualizar
+      return item;
+    });
+    setOrder(updateOrder);
   }
 
   return {
@@ -61,5 +78,6 @@ export function useApp() {
     addToOrder,
     productTotal,
     removeFromOrder,
+    increaseQuantity,
   };
 }

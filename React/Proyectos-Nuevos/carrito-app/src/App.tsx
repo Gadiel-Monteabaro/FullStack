@@ -4,7 +4,14 @@ import { MenuItem } from "./types";
 import { useApp } from "./hooks/useApp";
 
 function App() {
-  const { data, order, addToOrder, productTotal, removeFromOrder } = useApp();
+  const {
+    data,
+    order,
+    addToOrder,
+    productTotal,
+    removeFromOrder,
+    increaseQuantity,
+  } = useApp();
   return (
     <div className="container">
       <div className="cards">
@@ -28,6 +35,7 @@ function App() {
                 product={product}
                 productTotal={productTotal}
                 removeFromOrder={removeFromOrder}
+                increaseQuantity={increaseQuantity}
               />
             ))}
           </section>
