@@ -43,7 +43,7 @@ body {
 .card {
   display: grid;
   grid-template-rows: 4fr 1fr;
-  min-width: 350px;
+  min-width: 400px;
   min-height: 550px;
   /*box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);*/
   box-shadow: var(--shadow);
@@ -110,13 +110,18 @@ body {
   color: var(--card-color);
   font-weight: 800;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow-md);
   font-size: 14px;
   margin-bottom: 6px;
   padding: 8px 4px;
 }
+.card .card-item .card-text {
+  display: flex;
+  gap: 5px;
+}
+
 .card-buttons {
   width: 70px;
   height: 20px;

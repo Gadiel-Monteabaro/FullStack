@@ -4,7 +4,7 @@ import { MenuItem } from "./types";
 import { useApp } from "./hooks/useApp";
 
 function App() {
-  const { data, addToOrder } = useApp();
+  const { data, addToOrder, order } = useApp();
   return (
     <div className="container">
       <div className="cards">
@@ -22,7 +22,9 @@ function App() {
         <div className="card second-card">
           <section>
             <h2 className="card-title">Orden</h2>
-            <OrderItem />
+            {order.map((product) => (
+              <OrderItem key={product.id} product={product} />
+            ))}
           </section>
           <div className="card-info">
             <p className="first-p-footer">@Gadiel Monteabaro</p>

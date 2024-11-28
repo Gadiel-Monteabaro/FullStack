@@ -1,10 +1,19 @@
-export default function OrderItem() {
+import type { OrderItem } from "../types";
+
+type OrderItemProps = {
+  product: OrderItem;
+};
+
+export default function OrderItem({ product }: OrderItemProps) {
   return (
     <div className="card-item">
-      <p>Pizza a la Leña Chica</p>
-      <p>
-        $30 <span className="item-quantity">x1</span>
-      </p>
+      <div className="card-text">
+        <p>{product.name}</p>
+        <p>
+          ${product.price}{" "}
+          <span className="item-quantity">x{product.quantity}</span>
+        </p>
+      </div>
       <div className="card-buttons">
         <button className="item-icon increment">
           <i className="ri-add-line"></i>
