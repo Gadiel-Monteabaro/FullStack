@@ -11,7 +11,12 @@ function App() {
     productTotal,
     removeFromOrder,
     increaseQuantity,
+    decreaseQuantity,
+    clearOrder,
+    isEmpty,
+    orderTotal,
   } = useApp();
+
   return (
     <div className="container">
       <div className="cards">
@@ -27,20 +32,42 @@ function App() {
           </div>
         </div>
         <div className="card second-card">
-          <section>
-            <h2 className="card-title">Orden</h2>
-            {order.map((product) => (
-              <OrderItem
-                key={product.id}
-                product={product}
-                productTotal={productTotal}
-                removeFromOrder={removeFromOrder}
-                increaseQuantity={increaseQuantity}
-              />
-            ))}
+          <section className={`order ${isEmpty ? "empty" : "not-empty"}`}>
+            {isEmpty ? (
+              <h2 className="card-title">No hay ordenes</h2>
+            ) : (
+              <>
+                <h2 className="card-title">Orden</h2>
+                {order.map((product) => (
+                  <OrderItem
+                    key={product.id}
+                    product={product}
+                    productTotal={productTotal}
+                    removeFromOrder={removeFromOrder}
+                    increaseQuantity={increaseQuantity}
+                    decreaseQuantity={decreaseQuantity}
+                  />
+                ))}
+              </>
+            )}
           </section>
           <div className="card-info">
-            <p className="first-p-footer">@Gadiel Monteabaro</p>
+            {isEmpty ? (
+              ""
+            ) : (
+              <>
+                <button
+                  type="button"
+                  onClick={() => clearOrder()}
+                  className="btn"
+                >
+                  Eliminar Orden
+                </button>
+                <div className="total">
+                  <h3>Total: ${orderTotal}</h3>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

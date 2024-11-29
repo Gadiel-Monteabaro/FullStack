@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { menuItems } from "../data/db";
 import { MenuItem, OrderItem } from "../types";
 
@@ -22,6 +22,7 @@ export function useApp() {
   }, [order]);
 
   const MAX_ITEMS = 5;
+  const MIN_ITEMS = 1;
 
   // Función para agregar productos al estado "order"
   function addToOrder(item: MenuItem) {
@@ -55,22 +56,56 @@ export function useApp() {
     setOrder((prevCart) => prevCart.filter((guitar) => guitar.id !== id));
   }
 
-  // Función para incrementar la cantidad de un producto
+  // Función para incrementar la cantidad de un producto del estado "order" segun su "id"
   function increaseQuantity(id: MenuItem["id"]) {
     // Recorrer el estado "order" y actualizar la cantidad del producto
     const updateOrder = order.map((item) => {
-      // Si el id coincide, actualizar la cantidad
+      // Si el "id" coincide y la cantidad es menor que el máximo permitido, aumentar la cantidad
       if (item.id === id && item.quantity < MAX_ITEMS) {
         return {
           ...item,
           quantity: item.quantity + 1,
         };
       }
-      // Si no, devolver el item sin actualizar
+      // Si no, devover el producto sin cambios
       return item;
     });
+
     setOrder(updateOrder);
   }
+
+  // Función para decrementar la cantidad de un producto del estado "order" segun su "id"
+  function decreaseQuantity(id: MenuItem["id"]) {
+    // Recorrer el estado "order" y actualizar la cantidad del producto
+    const updateOrder = order.map((item) => {
+      // Si el "id" coincide y la cantidad es mayor que el mínimo permitido, disminuir la cantidad
+      if (item.id === id && item.quantity > MIN_ITEMS) {
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+        };
+      }
+      // Si no, devover el producto sin cambios
+      return item;
+    });
+
+    setOrder(updateOrder);
+  }
+
+  // Función para eliminar los productos del estado "order"
+  function clearOrder() {
+    setOrder([]);
+  }
+
+  // Memorizar el resultado de una función, solo si el valor de "order" cambia
+  const isEmpty = useMemo(() => order.length === 0, [order]);
+
+  // Memorizar el resultado de una función, solo si el valor de "order" cambia
+  const orderTotal = useMemo(
+    // Recorrer el estado "order" y calcular el subtotal de todos los productos
+    () => order.reduce((total, item) => total + item.quantity * item.price, 0),
+    [order]
+  );
 
   return {
     data,
@@ -79,5 +114,9 @@ export function useApp() {
     productTotal,
     removeFromOrder,
     increaseQuantity,
+    decreaseQuantity,
+    clearOrder,
+    isEmpty,
+    orderTotal,
   };
 }

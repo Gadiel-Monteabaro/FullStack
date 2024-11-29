@@ -5,6 +5,7 @@ type OrderItemProps = {
   productTotal: (price: number, quantity: number) => number;
   removeFromOrder: (id: MenuItem["id"]) => void;
   increaseQuantity: (id: MenuItem["id"]) => void;
+  decreaseQuantity: (id: MenuItem["id"]) => void;
 };
 
 export default function OrderItem({
@@ -12,6 +13,7 @@ export default function OrderItem({
   productTotal,
   removeFromOrder,
   increaseQuantity,
+  decreaseQuantity,
 }: OrderItemProps) {
   return (
     <div className="card-item">
@@ -24,15 +26,21 @@ export default function OrderItem({
       </div>
       <div className="card-buttons">
         <button
+          type="button"
           onClick={() => increaseQuantity(product.id)}
           className="item-icon increment"
         >
           <i className="ri-add-line"></i>
         </button>
-        <button className="item-icon decrement">
+        <button
+          type="button"
+          onClick={() => decreaseQuantity(product.id)}
+          className="item-icon decrement"
+        >
           <i className="ri-subtract-fill"></i>
         </button>
         <button
+          type="button"
           onClick={() => removeFromOrder(product.id)}
           className="item-icon delete"
         >
